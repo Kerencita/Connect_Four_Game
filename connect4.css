@@ -1,0 +1,66 @@
+
+h1{
+  text-align: center;
+  text-shadow: .2em .2em .3em silver;
+  letter-spacing: 0.5em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2.5em;
+}
+
+#game {
+  /* border: 1px solid blue; */
+  margin: 2em 4em 2em 4em;
+  display: flex;
+  justify-content: center;
+  
+}
+/* game board table */
+
+#board td {
+  width: 50px;
+  height: 50px;
+  /* border: solid 2px #666; */
+  border: solid 2px black;
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece-blue {
+  /* TODO: make into circles */
+  margin: 5px;
+  width: 80%;
+  height: 80%;
+  border-radius: 20px;
+  background-color: blue;
+  animation-name: drop;
+  animation-duration: 1s;
+}
+
+@keyframes drop {
+  from {transform: translateY(-700%);}
+  to {transform: translateY(0%);}
+}
+
+.piece-red {
+  /* TODO: make into circles */
+  margin: 5px;
+  width: 80%;
+  height: 80%;
+  border-radius: 20px;
+  background-color: red;
+  animation-name: drop;
+  animation-duration: 1s;
+}
+
+/* TODO: make pieces red/blue,  depending on player 1/2 piece */
+
+/* column-top is table row of clickable areas for each column */
+
+#column-top td {
+  border: dotted 1px lightgray;
+}
+
+#column-top td:hover {
+  background-color: gold;
+  opacity: 0.5;
+}
